@@ -351,6 +351,15 @@ const DIEM_GK1 = {
   "Lương Ngọc Yến":{van:8.3, toan:9, anh:8.75, tin:9.5, ls:9, khtn:9.5, hangToan:14, hangAnh:9}
 };
 
+/* CHỈ HIỂN THỊ GHI CHÚ CHO NHỮNG HỌC SINH CÓ THAY ĐỔI ĐIỂM */
+const GHI_CHU_DIEM = {
+  "Đoàn Bảo Anh": "Điểm môn Tiếng Anh đã được cập nhật thành 8.0 sau khi kiểm tra lại với GVBM.",
+  "Nguyễn Minh Anh": "Điểm môn Tiếng Anh đã được cập nhật thành 7.0 sau khi kiểm tra lại với GVBM.",
+  "Lương Ngọc Yến": "Điểm môn Tiếng Anh đã được cập nhật thành 8.75 sau khi kiểm tra lại với GVBM.",
+  "Trần Ngọc Anh": "Điểm môn Tiếng Anh đã được cập nhật thành 6.75 sau khi kiểm tra lại với GVBM.",
+  "Hồ Bảo Anh": "Điểm khảo sát môn Ngữ văn đã được cập nhật thành 6.25 sau khi kiểm tra lại với GVBM."
+};
+
 const NHAN_XET_THANG10 = {
   "Vũ Ngọc Đăng Khoa":["Tìm đủ các ước của 91 để tránh bỏ sót trường hợp.","Chú ý làm phần trắc nghiệm và bài kiểm tra."],
   "Tường Thái Sơn":["Cẩn trọng hơn khi trình bày bài, không để sót các điều kiện.","Ôn lại dạng bài tìm x: 2^x + 2^(x+1) = 48.","Kiểm tra thật kĩ một số có là số nguyên tố không."],
@@ -451,7 +460,6 @@ function traCuu(){
   const chinhXac = HS.find(hs => boDau(hs.ten) === key && hs.mk === mkVal);
   
   if (!chinhXac){
-    // Phân biệt lỗi sai tên hay sai mật khẩu
     const coTen = HS.some(hs => boDau(hs.ten) === key);
     if (!coTen) {
       loi.textContent = 'Không tìm thấy học sinh "' + tenRaw + '". Vui lòng kiểm tra lại họ tên (có thể sai dấu).';
@@ -490,6 +498,9 @@ function hienThi(hs){
       typeof gk.hangAnh === 'number' ? `Xếp hạng Tiếng Anh: <b>${gk.hangAnh}</b>` : ''
     ].filter(Boolean).join(' · ');
 
+    // Chỉ hiển thị ghi chú nếu học sinh có trong danh sách GHI_CHU_DIEM
+    const ghiChu = GHI_CHU_DIEM[hs.ten] ? `<div class="gk1-note"><b>Ghi chú:</b> ${GHI_CHU_DIEM[hs.ten]}</div>` : '';
+
     gkBox.innerHTML = `
       <div class="scores">
         <div class="score van"><div class="lbl">Ngữ văn</div><div class="val">${van === null ? '—' : fmt(van)}</div></div>
@@ -500,9 +511,7 @@ function hienThi(hs){
         <div class="score khtn"><div class="lbl">KHTN</div><div class="val">${khtn === null ? '—' : fmt(khtn)}</div></div>
       </div>
       ${rankLine ? `<div class="gk1-meta">${rankLine}</div>` : ''}
-      <div class="gk1-note">
-        <b>Ghi chú:</b> Điểm một số môn đã được cập nhật sau khi kiểm tra lại với GVBM (Cụ thể: Tiếng Anh của Đoàn Bảo Anh: 8, Nguyễn Minh Anh: 7, Lương Ngọc Yến: 8.75, Trần Ngọc Anh: 6.75; Ngữ văn khảo sát của Hồ Bảo Anh: 6.25).
-      </div>
+      ${ghiChu}
     `;
   } else {
     gkBox.innerHTML = `<div class="gk1-empty">${ICON_INFO}<span>Điểm kiểm tra giữa học kì I chưa được cập nhật.</span></div>`;
