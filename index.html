@@ -33,7 +33,6 @@
   .card.lookup .frame-head h1 .accent{color:var(--rose);}
   .lead{margin:0 0 18px;font-size:14.5px;color:var(--muted);font-weight:500;line-height:1.6;}
   
-  /* Form: Tên + Mật khẩu */
   .lookup-form{display:grid;grid-template-columns:1.5fr 1fr 190px;gap:14px;align-items:end;}
   @media(max-width:900px){.lookup-form{grid-template-columns:1fr 1fr;}.lookup-form .btn{grid-column:1/-1;}}
   @media(max-width:560px){.lookup-form{grid-template-columns:1fr;}}
@@ -305,59 +304,51 @@ const HS = [
   {ten:"Trần Thảo Anh",lop:"6A3",ns:"2015-05-23",mk:"T6M5D9",van:6.50,toan:4.75,anh:3.00,tongKhoi:345,tongLop:41,toanKhoi:345,toanLop:43}
 ];
 
+// ĐÃ CẬP NHẬT ĐIỂM VÀ THỨ HẠNG MÔN TIẾNG ANH THEO FILE EXCEL MỚI
 const DIEM_GK1 = {
-  "Nguyễn Như Phúc An":{van:7.5, toan:9.25, anh:7.75, tin:8.75, ls:9.5, khtn:9.5, hangToan:10, hangAnh:27},
-  "Phạm Đặng Thảo An":{van:8.5, toan:8, anh:7.75, tin:8.75, ls:8, khtn:9.5, hangToan:31, hangAnh:27},
-  "Đoàn Bảo Anh":{van:7.5, toan:9.75, anh:8, tin:9.25, ls:9.5, khtn:9.5, hangToan:1, hangAnh:37},
-  "Phạm Đức Hoàng Anh":{van:7, toan:7.25, anh:7, tin:9.5, ls:7, khtn:9, hangToan:36, hangAnh:34},
-  "Trần Ngọc Anh":{van:7.5, toan:8.25, anh:6.75, tin:9.5, ls:8, khtn:9.5, hangToan:27, hangAnh:null},
+  "Nguyễn Như Phúc An":{van:7.5, toan:9.25, anh:7.75, tin:8.75, ls:9.5, khtn:9.5, hangToan:10, hangAnh:28},
+  "Phạm Đặng Thảo An":{van:8.5, toan:8, anh:7.75, tin:8.75, ls:8, khtn:9.5, hangToan:31, hangAnh:28},
+  "Đoàn Bảo Anh":{van:7.5, toan:9.75, anh:8.0, tin:9.25, ls:9.5, khtn:9.5, hangToan:1, hangAnh:22},
+  "Phạm Đức Hoàng Anh":{van:7, toan:7.25, anh:7.0, tin:9.5, ls:7, khtn:9, hangToan:36, hangAnh:35},
+  "Trần Ngọc Anh":{van:7.5, toan:8.25, anh:6.75, tin:9.5, ls:8, khtn:9.5, hangToan:27, hangAnh:39},
   "Hồ Bảo Anh":{van:8, toan:8.5, anh:8.75, tin:8.75, ls:8, khtn:10, hangToan:23, hangAnh:5},
-  "Nguyễn Minh Anh":{van:6.75, toan:8.25, anh:7, tin:9, ls:6.5, khtn:10, hangToan:27, hangAnh:null},
+  "Nguyễn Minh Anh":{van:6.75, toan:8.25, anh:7.0, tin:9, ls:6.5, khtn:10, hangToan:27, hangAnh:35},
   "Tào Hồng Anh":{van:7.75, toan:9.5, anh:8.25, tin:9, ls:9, khtn:10, hangToan:4, hangAnh:17},
   "Đỗ Hương Anh":{van:8, toan:9.5, anh:8.75, tin:9.5, ls:8, khtn:9.5, hangToan:4, hangAnh:5},
-  "Trần Thảo Anh":{van:8, toan:5.25, anh:5.25, tin:8.25, ls:4.5, khtn:7.5, hangToan:43, hangAnh:39},
-  "Nguyễn Thái Bảo":{van:7.5, toan:6.75, anh:7, tin:9, ls:9, khtn:9.5, hangToan:41, hangAnh:34},
+  "Trần Thảo Anh":{van:8, toan:5.25, anh:5.25, tin:8.25, ls:4.5, khtn:7.5, hangToan:43, hangAnh:41},
+  "Nguyễn Thái Bảo":{van:7.5, toan:6.75, anh:7.0, tin:9, ls:9, khtn:9.5, hangToan:41, hangAnh:35},
   "Hà Gia Bảo":{van:7.3, toan:9.75, anh:9.25, tin:9.75, ls:9.5, khtn:9.5, hangToan:1, hangAnh:1},
   "Trần Minh Châu":{van:8, toan:9, anh:8.75, tin:9.5, ls:9.5, khtn:9.5, hangToan:14, hangAnh:5},
-  "Đào Ngọc Quỳnh Chi":{van:7.5, toan:9, anh:7.25, tin:8.75, ls:8.5, khtn:10, hangToan:14, hangAnh:33},
-  "Lê Khánh Chi":{van:8.3, toan:9.25, anh:8.5, tin:9.5, ls:9, khtn:9.5, hangToan:10, hangAnh:9},
+  "Đào Ngọc Quỳnh Chi":{van:7.5, toan:9, anh:7.25, tin:8.75, ls:8.5, khtn:10, hangToan:14, hangAnh:34},
+  "Lê Khánh Chi":{van:8.3, toan:9.25, anh:8.5, tin:9.5, ls:9, khtn:9.5, hangToan:10, hangAnh:10},
   "Đào Minh Đại":{van:7, toan:8.25, anh:8.25, tin:9.25, ls:7, khtn:9.5, hangToan:27, hangAnh:17},
-  "Lê Huy Dũng":{van:8, toan:6.75, anh:7.5, tin:7.75, ls:6.5, khtn:9, hangToan:41, hangAnh:32},
-  "Nguyễn Thị Phương Hà":{van:8, toan:9.25, anh:8, tin:9.75, ls:9, khtn:10, hangToan:10, hangAnh:22},
-  "Lê Ngọc Hân":{van:6.5, toan:9, anh:8.5, tin:7.5, ls:6.5, khtn:9.5, hangToan:14, hangAnh:9},
-  "Nguyễn Quang Hưng":{van:8, toan:9.5, anh:9, tin:9.25, ls:8.5, khtn:9.5, hangToan:4, hangAnh:2},
-  "Đào Gia Khánh":{van:6, toan:7.25, anh:5, tin:9.5, ls:4.5, khtn:8, hangToan:36, hangAnh:40},
+  "Lê Huy Dũng":{van:8, toan:6.75, anh:7.5, tin:7.75, ls:6.5, khtn:9, hangToan:41, hangAnh:33},
+  "Nguyễn Thị Phương Hà":{van:8, toan:9.25, anh:8.0, tin:9.75, ls:9, khtn:10, hangToan:10, hangAnh:22},
+  "Lê Ngọc Hân":{van:6.5, toan:9, anh:8.5, tin:7.5, ls:6.5, khtn:9.5, hangToan:14, hangAnh:10},
+  "Nguyễn Quang Hưng":{van:8, toan:9.5, anh:9.0, tin:9.25, ls:8.5, khtn:9.5, hangToan:4, hangAnh:2},
+  "Đào Gia Khánh":{van:6, toan:7.25, anh:5.0, tin:9.5, ls:4.5, khtn:8, hangToan:36, hangAnh:42},
   "Bùi Nguyên Khánh":{van:5.3, toan:7, anh:8.25, tin:9, ls:8, khtn:10, hangToan:39, hangAnh:17},
-  "Hán Nhật Khánh":{van:5.5, toan:7.25, anh:8, tin:7.75, ls:8.5, khtn:9, hangToan:36, hangAnh:22},
-  "Vũ Ngọc Đăng Khoa":{van:7.75, toan:8.75, anh:7.75, tin:9.5, ls:8, khtn:9.5, hangToan:22, hangAnh:27},
-  "Đặng Tuấn Kiệt":{van:7.5, toan:9, anh:9, tin:9.25, ls:9, khtn:8.5, hangToan:14, hangAnh:2},
-  "Trần Quang Minh":{van:8, toan:8.25, anh:7.75, tin:9.75, ls:9, khtn:10, hangToan:27, hangAnh:27},
-  "Nguyễn Tiến Minh":{van:6, toan:8.5, anh:7.75, tin:8.25, ls:6.5, khtn:9, hangToan:23, hangAnh:27},
-  "Nguyễn Đức Minh":{van:8, toan:9.5, anh:8.5, tin:9.5, ls:9, khtn:9.5, hangToan:4, hangAnh:9},
-  "Hoàng Hiểu Minh":{van:7, toan:7.75, anh:9, tin:8.75, ls:8, khtn:9.5, hangToan:34, hangAnh:2},
+  "Hán Nhật Khánh":{van:5.5, toan:7.25, anh:8.0, tin:7.75, ls:8.5, khtn:9, hangToan:36, hangAnh:22},
+  "Vũ Ngọc Đăng Khoa":{van:7.75, toan:8.75, anh:7.75, tin:9.5, ls:8, khtn:9.5, hangToan:22, hangAnh:28},
+  "Đặng Tuấn Kiệt":{van:7.5, toan:9, anh:9.0, tin:9.25, ls:9, khtn:8.5, hangToan:14, hangAnh:2},
+  "Trần Quang Minh":{van:8, toan:8.25, anh:7.75, tin:9.75, ls:9, khtn:10, hangToan:27, hangAnh:28},
+  "Nguyễn Tiến Minh":{van:6, toan:8.5, anh:7.75, tin:8.25, ls:6.5, khtn:9, hangToan:23, hangAnh:28},
+  "Nguyễn Đức Minh":{van:8, toan:9.5, anh:8.5, tin:9.5, ls:9, khtn:9.5, hangToan:4, hangAnh:10},
+  "Hoàng Hiểu Minh":{van:7, toan:7.75, anh:9.0, tin:8.75, ls:8, khtn:9.5, hangToan:34, hangAnh:2},
   "Hà Nguyệt Minh":{van:9, toan:9.5, anh:8.25, tin:9.75, ls:9.5, khtn:10, hangToan:4, hangAnh:17},
-  "Nguyễn Nhật Nam":{van:6, toan:8, anh:8.5, tin:8.75, ls:6, khtn:8.5, hangToan:31, hangAnh:9},
-  "Nguyễn Đức Nam":{van:4.75, toan:8, anh:8.5, tin:7.75, ls:8, khtn:9, hangToan:31, hangAnh:9},
-  "Chu Bảo Ngọc":{van:8.3, toan:9, anh:8, tin:9, ls:9.5, khtn:10, hangToan:14, hangAnh:22},
+  "Nguyễn Nhật Nam":{van:6, toan:8, anh:8.5, tin:8.75, ls:6, khtn:8.5, hangToan:31, hangAnh:10},
+  "Nguyễn Đức Nam":{van:4.75, toan:8, anh:8.5, tin:7.75, ls:8, khtn:9, hangToan:31, hangAnh:10},
+  "Chu Bảo Ngọc":{van:8.3, toan:9, anh:8.0, tin:9, ls:9.5, khtn:10, hangToan:14, hangAnh:22},
   "Nguyễn Võ Minh Nhật":{van:6.5, toan:9, anh:8.25, tin:9, ls:6.5, khtn:9.5, hangToan:14, hangAnh:17},
-  "Nguyễn Phương Oanh":{van:8.3, toan:9, anh:8.5, tin:8.75, ls:8.5, khtn:9.5, hangToan:14, hangAnh:9},
-  "Trịnh Thu Phương":{van:6.3, toan:7, anh:6, tin:8.5, ls:6.5, khtn:8, hangToan:39, hangAnh:38},
-  "Nguyễn Minh Quân":{van:7, toan:7.5, anh:5, tin:7, ls:3, khtn:7, hangToan:35, hangAnh:40},
-  "Cao Thanh Sơn":{van:6.5, toan:9.5, anh:7, tin:9.75, ls:9, khtn:9.5, hangToan:4, hangAnh:34},
-  "Nguyễn Minh Sơn":{van:8, toan:8.5, anh:8, tin:9.25, ls:8.5, khtn:8, hangToan:23, hangAnh:22},
-  "Tường Thái Sơn":{van:7.3, toan:8.5, anh:8, tin:9.75, ls:9, khtn:10, hangToan:23, hangAnh:22},
+  "Nguyễn Phương Oanh":{van:8.3, toan:9, anh:8.5, tin:8.75, ls:8.5, khtn:9.5, hangToan:14, hangAnh:10},
+  "Trịnh Thu Phương":{van:6.3, toan:7, anh:6.0, tin:8.5, ls:6.5, khtn:8, hangToan:39, hangAnh:40},
+  "Nguyễn Minh Quân":{van:7, toan:7.5, anh:5.0, tin:7, ls:3, khtn:7, hangToan:35, hangAnh:42},
+  "Cao Thanh Sơn":{van:6.5, toan:9.5, anh:7.0, tin:9.75, ls:9, khtn:9.5, hangToan:4, hangAnh:35},
+  "Nguyễn Minh Sơn":{van:8, toan:8.5, anh:8.0, tin:9.25, ls:8.5, khtn:8, hangToan:23, hangAnh:22},
+  "Tường Thái Sơn":{van:7.3, toan:8.5, anh:8.0, tin:9.75, ls:9, khtn:10, hangToan:23, hangAnh:22},
   "Nguyễn Khả Huy Tuấn":{van:7, toan:9.25, anh:8.75, tin:9.75, ls:9, khtn:9.5, hangToan:10, hangAnh:5},
-  "Nguyễn Gia Vinh":{van:8.3, toan:9.75, anh:8.5, tin:9.25, ls:9.5, khtn:9.5, hangToan:1, hangAnh:9},
-  "Lương Ngọc Yến":{van:8.3, toan:9, anh:8.75, tin:9.5, ls:9, khtn:9.5, hangToan:14, hangAnh:9}
-};
-
-/* CHỈ HIỂN THỊ GHI CHÚ CHO NHỮNG HỌC SINH CÓ THAY ĐỔI ĐIỂM */
-const GHI_CHU_DIEM = {
-  "Đoàn Bảo Anh": "Điểm môn Tiếng Anh đã được cập nhật thành 8.0 sau khi kiểm tra lại với GVBM.",
-  "Nguyễn Minh Anh": "Điểm môn Tiếng Anh đã được cập nhật thành 7.0 sau khi kiểm tra lại với GVBM.",
-  "Lương Ngọc Yến": "Điểm môn Tiếng Anh đã được cập nhật thành 8.75 sau khi kiểm tra lại với GVBM.",
-  "Trần Ngọc Anh": "Điểm môn Tiếng Anh đã được cập nhật thành 6.75 sau khi kiểm tra lại với GVBM.",
-  "Hồ Bảo Anh": "Điểm khảo sát môn Ngữ văn đã được cập nhật thành 6.25 sau khi kiểm tra lại với GVBM."
+  "Nguyễn Gia Vinh":{van:8.3, toan:9.75, anh:8.5, tin:9.25, ls:9.5, khtn:9.5, hangToan:1, hangAnh:10},
+  "Lương Ngọc Yến":{van:8.3, toan:9, anh:8.75, tin:9.5, ls:9, khtn:9.5, hangToan:14, hangAnh:5}
 };
 
 const NHAN_XET_THANG10 = {
@@ -441,6 +432,12 @@ function renderStudentFolder(hs){
   }
 }
 
+function getRankVan(scoreVan) {
+  const scores = Object.values(DIEM_GK1).map(s => s.van).filter(v => v !== undefined && v !== null && v !== '');
+  const uniqueSorted = [...new Set(scores)].sort((a, b) => b - a);
+  return uniqueSorted.indexOf(scoreVan) + 1;
+}
+
 function traCuu(){
   const tenRaw = $('ten').value.trim();
   const mkVal = $('mk').value.trim().toUpperCase();
@@ -493,8 +490,8 @@ function hienThi(hs){
     const ls = gk.ls !== undefined ? gk.ls : null;
     const khtn = gk.khtn !== undefined ? gk.khtn : null;
     
-    // Tính xếp hạng Văn tự động dựa trên mảng điểm
-    const rankVan = gk.van !== undefined ? Object.values(DIEM_GK1).map(s=>s.van).filter(v=>v!==undefined).sort((a,b)=>b-a).indexOf(gk.van) + 1 : '';
+    // Lấy thứ hạng Văn tự động tính, Toán và Anh lấy từ dữ liệu cứng
+    const rankVan = gk.van !== undefined ? getRankVan(gk.van) : '';
     const rankToan = gk.hangToan !== undefined ? gk.hangToan : '';
     const rankAnh = gk.hangAnh !== undefined ? gk.hangAnh : '';
 
@@ -503,9 +500,6 @@ function hienThi(hs){
     if (rankToan) rankParts.push(`Xếp hạng Toán: <b>${rankToan}</b>`);
     if (rankAnh) rankParts.push(`Xếp hạng Tiếng Anh: <b>${rankAnh}</b>`);
     const rankLine = rankParts.join(' · ');
-
-    // Chỉ hiển thị ghi chú nếu học sinh có trong danh sách GHI_CHU_DIEM
-    const ghiChu = GHI_CHU_DIEM[hs.ten] ? `<div class="gk1-note"><b>Ghi chú:</b> ${GHI_CHU_DIEM[hs.ten]}</div>` : '';
 
     gkBox.innerHTML = `
       <div class="scores">
@@ -517,7 +511,6 @@ function hienThi(hs){
         <div class="score khtn"><div class="lbl">KHTN</div><div class="val">${khtn === null ? '—' : fmt(khtn)}</div></div>
       </div>
       ${rankLine ? `<div class="gk1-meta">${rankLine}</div>` : ''}
-      ${ghiChu}
     `;
   } else {
     gkBox.innerHTML = `<div class="gk1-empty">${ICON_INFO}<span>Điểm kiểm tra giữa học kì I chưa được cập nhật.</span></div>`;
