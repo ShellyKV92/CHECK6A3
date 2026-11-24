@@ -33,7 +33,7 @@
   .card.lookup .frame-head h1 .accent{color:var(--rose);}
   .lead{margin:0 0 18px;font-size:14.5px;color:var(--muted);font-weight:500;line-height:1.6;}
   
-  /* Cập nhật lại form: Bỏ ngày sinh, còn Tên + Mật khẩu */
+  /* Form: Tên + Mật khẩu */
   .lookup-form{display:grid;grid-template-columns:1.5fr 1fr 190px;gap:14px;align-items:end;}
   @media(max-width:900px){.lookup-form{grid-template-columns:1fr 1fr;}.lookup-form .btn{grid-column:1/-1;}}
   @media(max-width:560px){.lookup-form{grid-template-columns:1fr;}}
@@ -260,25 +260,25 @@ const FOLDER_IDS = {
 const TONG_KHOI = 385, SI_SO_LOP = 43;
 
 const HS = [
-  {ten:"Đào Minh Đại",lop:"6A3",ns:"2015-09-05",mk:"K7M2P9",van:4.25,toan:9.50,anh:9.00,tongKhoi:52,tongLop:9,toanKhoi:2,toanLop:1},
-  {ten:"Nguyễn Đức Minh",lop:"6A3",ns:"2015-11-02",mk:"H4R8W3",van:7.25,toan:9.25,anh:7.00,tongKhoi:22,tongLop:5,toanKhoi:5,toanLop:2},
+  {ten:"Đào Minh Đại",lop:"6A3",ns:"2015-05-09",mk:"K7M2P9",van:4.25,toan:9.50,anh:9.00,tongKhoi:52,tongLop:9,toanKhoi:2,toanLop:1},
+  {ten:"Nguyễn Đức Minh",lop:"6A3",ns:"2015-02-11",mk:"H4R8W3",van:7.25,toan:9.25,anh:7.00,tongKhoi:22,tongLop:5,toanKhoi:5,toanLop:2},
   {ten:"Trần Quang Minh",lop:"6A3",ns:"2015-01-01",mk:"T9N5Q2",van:6.25,toan:9.00,anh:7.75,tongKhoi:38,tongLop:7,toanKhoi:14,toanLop:3},
-  {ten:"Nguyễn Đức Nam",lop:"6A3",ns:"2015-09-08",mk:"B6V3X8",van:2.25,toan:9.00,anh:8.50,tongKhoi:194,tongLop:25,toanKhoi:14,toanLop:3},
+  {ten:"Nguyễn Đức Nam",lop:"6A3",ns:"2015-08-09",mk:"B6V3X8",van:2.25,toan:9.00,anh:8.50,tongKhoi:194,tongLop:25,toanKhoi:14,toanLop:3},
   {ten:"Trần Minh Châu",lop:"6A3",ns:"2015-09-28",mk:"D2J7Y4",van:7.50,toan:8.75,anh:8.50,tongKhoi:7,tongLop:2,toanKhoi:39,toanLop:5},
   {ten:"Lê Ngọc Hân",lop:"6A3",ns:"2015-02-20",mk:"F8K4M6",van:5.75,toan:8.75,anh:8.50,tongKhoi:38,tongLop:7,toanKhoi:39,toanLop:5},
   {ten:"Nguyễn Quang Hưng",lop:"6A3",ns:"2015-09-18",mk:"G3L9C5",van:5.25,toan:8.75,anh:7.00,tongKhoi:134,tongLop:18,toanKhoi:39,toanLop:5},
-  {ten:"Hà Nguyệt Minh",lop:"6A3",ns:"2015-07-02",mk:"P5R2H7",van:8.50,toan:8.75,anh:8.00,tongKhoi:2,tongLop:1,toanKhoi:39,toanLop:5},
+  {ten:"Hà Nguyệt Minh",lop:"6A3",ns:"2015-02-07",mk:"P5R2H7",van:8.50,toan:8.75,anh:8.00,tongKhoi:2,tongLop:1,toanKhoi:39,toanLop:5},
   {ten:"Tào Hồng Anh",lop:"6A3",ns:"2015-05-25",mk:"W7S4N9",van:8.00,toan:8.50,anh:7.50,tongKhoi:14,tongLop:4,toanKhoi:70,toanLop:9},
-  {ten:"Đào Ngọc Quỳnh Chi",lop:"6A3",ns:"2015-11-09",mk:"V3M8K2",van:8.00,toan:8.50,anh:8.00,tongKhoi:8,tongLop:3,toanKhoi:70,toanLop:9},
+  {ten:"Đào Ngọc Quỳnh Chi",lop:"6A3",ns:"2015-09-11",mk:"V3M8K2",van:8.00,toan:8.50,anh:8.00,tongKhoi:8,tongLop:3,toanKhoi:70,toanLop:9},
   {ten:"Nguyễn Tiến Minh",lop:"6A3",ns:"2015-01-24",mk:"Y6Q9B4",van:2.50,toan:8.50,anh:7.00,tongKhoi:256,tongLop:33,toanKhoi:70,toanLop:9},
   {ten:"Nguyễn Nhật Nam",lop:"6A3",ns:"2015-11-26",mk:"Z4T7J3",van:6.25,toan:8.50,anh:7.25,tongKhoi:88,tongLop:14,toanKhoi:70,toanLop:9},
   {ten:"Nguyễn Gia Vinh",lop:"6A3",ns:"2015-03-29",mk:"C8H5F9",van:7.00,toan:8.50,anh:5.25,tongKhoi:148,tongLop:21,toanKhoi:70,toanLop:9},
-  {ten:"Lương Ngọc Yến",lop:"6A3",ns:"2015-10-09",mk:"N2P6D7",van:6.25,toan:8.50,anh:7.75,tongKhoi:66,tongLop:12,toanKhoi:70,toanLop:9},
-  {ten:"Đỗ Hương Anh",lop:"6A3",ns:"2015-11-08",mk:"M9V3S4",van:5.75,toan:8.25,anh:7.75,tongKhoi:104,tongLop:16,toanKhoi:95,toanLop:15},
+  {ten:"Lương Ngọc Yến",lop:"6A3",ns:"2015-09-10",mk:"N2P6D7",van:6.25,toan:8.50,anh:7.75,tongKhoi:66,tongLop:12,toanKhoi:70,toanLop:9},
+  {ten:"Đỗ Hương Anh",lop:"6A3",ns:"2015-08-11",mk:"M9V3S4",van:5.75,toan:8.25,anh:7.75,tongKhoi:104,tongLop:16,toanKhoi:95,toanLop:15},
   {ten:"Lê Khánh Chi",lop:"6A3",ns:"2015-03-19",mk:"X5K8R2",van:7.75,toan:8.25,anh:6.75,tongKhoi:52,tongLop:9,toanKhoi:95,toanLop:15},
   {ten:"Nguyễn Thị Phương Hà",lop:"6A3",ns:"2015-01-26",mk:"J7B4T6",van:7.25,toan:8.25,anh:8.00,tongKhoi:22,tongLop:5,toanKhoi:95,toanLop:15},
   {ten:"Đặng Tuấn Kiệt",lop:"6A3",ns:"2015-08-19",mk:"L3C9Y5",van:7.00,toan:8.25,anh:7.50,tongKhoi:52,tongLop:9,toanKhoi:95,toanLop:15},
-  {ten:"Nguyễn Võ Minh Nhật",lop:"6A3",ns:"2015-04-12",mk:"Q8F5M3",van:5.25,toan:8.25,anh:6.00,tongKhoi:207,tongLop:26,toanKhoi:95,toanLop:15},
+  {ten:"Nguyễn Võ Minh Nhật",lop:"6A3",ns:"2015-12-04",mk:"Q8F5M3",van:5.25,toan:8.25,anh:6.00,tongKhoi:207,tongLop:26,toanKhoi:95,toanLop:15},
   {ten:"Hà Gia Bảo",lop:"6A3",ns:"2015-10-27",mk:"R4D6V9",van:5.50,toan:8.00,anh:6.50,tongKhoi:179,tongLop:24,toanKhoi:131,toanLop:20},
   {ten:"Đoàn Bảo Anh",lop:"6A3",ns:"2015-04-13",mk:"S2H7P4",van:6.75,toan:7.75,anh:7.75,tongKhoi:79,tongLop:13,toanKhoi:160,toanLop:21},
   {ten:"Lê Huy Dũng",lop:"6A3",ns:"2015-09-30",mk:"T8J3K6",van:5.50,toan:7.75,anh:5.75,tongKhoi:226,tongLop:30,toanKhoi:160,toanLop:21},
@@ -291,17 +291,17 @@ const HS = [
   {ten:"Phạm Đặng Thảo An",lop:"6A3",ns:"2015-08-18",mk:"C4V9K7",van:6.75,toan:7.50,anh:3.50,tongKhoi:261,tongLop:36,toanKhoi:195,toanLop:28},
   {ten:"Hồ Bảo Anh",lop:"6A3",ns:"2015-03-24",mk:"D7W2M5",van:6.25,toan:7.50,anh:5.75,tongKhoi:226,tongLop:30,toanKhoi:195,toanLop:28},
   {ten:"Nguyễn Minh Quân",lop:"6A3",ns:"2015-12-25",mk:"F3X6P9",van:4.75,toan:7.50,anh:3.75,tongKhoi:305,tongLop:38,toanKhoi:195,toanLop:28},
-  {ten:"Nguyễn Minh Anh",lop:"6A3",ns:"2015-01-09",mk:"G9Y4R2",van:5.75,toan:7.25,anh:3.00,tongKhoi:305,tongLop:38,toanKhoi:217,toanLop:32},
-  {ten:"Trần Ngọc Anh",lop:"6A3",ns:"2015-05-09",mk:"H5Z8N4",van:7.25,toan:7.25,anh:6.50,tongKhoi:134,tongLop:18,toanKhoi:217,toanLop:32},
+  {ten:"Nguyễn Minh Anh",lop:"6A3",ns:"2015-09-01",mk:"G9Y4R2",van:5.75,toan:7.25,anh:3.00,tongKhoi:305,tongLop:38,toanKhoi:217,toanLop:32},
+  {ten:"Trần Ngọc Anh",lop:"6A3",ns:"2015-09-05",mk:"H5Z8N4",van:7.25,toan:7.25,anh:6.50,tongKhoi:134,tongLop:18,toanKhoi:217,toanLop:32},
   {ten:"Nguyễn Thái Bảo",lop:"6A3",ns:"2015-07-23",mk:"J2B3S7",van:4.75,toan:7.25,anh:7.00,tongKhoi:226,tongLop:30,toanKhoi:217,toanLop:32},
-  {ten:"Hoàng Hiểu Minh",lop:"6A3",ns:"2015-12-11",mk:"K6C5T9",van:6.00,toan:7.25,anh:7.75,tongKhoi:134,tongLop:18,toanKhoi:217,toanLop:32},
+  {ten:"Hoàng Hiểu Minh",lop:"6A3",ns:"2015-11-12",mk:"K6C5T9",van:6.00,toan:7.25,anh:7.75,tongKhoi:134,tongLop:18,toanKhoi:217,toanLop:32},
   {ten:"Cao Thanh Sơn",lop:"6A3",ns:"2015-03-26",mk:"L8D4V3",van:4.75,toan:7.25,anh:5.75,tongKhoi:261,tongLop:36,toanKhoi:217,toanLop:32},
   {ten:"Vũ Ngọc Đăng Khoa",lop:"6A3",ns:"2015-07-07",mk:"M4F9W6",van:7.25,toan:6.75,anh:7.75,tongKhoi:104,tongLop:16,toanKhoi:253,toanLop:37},
-  {ten:"Nguyễn Khả Huy Tuấn",lop:"6A3",ns:"2015-03-10",mk:"N7G2X5",van:4.75,toan:6.75,anh:8.00,tongKhoi:207,tongLop:26,toanKhoi:253,toanLop:37},
+  {ten:"Nguyễn Khả Huy Tuấn",lop:"6A3",ns:"2015-10-03",mk:"N7G2X5",van:4.75,toan:6.75,anh:8.00,tongKhoi:207,tongLop:26,toanKhoi:253,toanLop:37},
   {ten:"Phạm Đức Hoàng Anh",lop:"6A3",ns:"2015-01-17",mk:"P2H8Y3",van:5.75,toan:6.50,anh:3.25,tongKhoi:323,tongLop:40,toanKhoi:274,toanLop:39},
   {ten:"Nguyễn Phương Oanh",lop:"6A3",ns:"2015-03-23",mk:"Q5J6Z8",van:8.00,toan:6.25,anh:7.75,tongKhoi:88,tongLop:14,toanKhoi:284,toanLop:40},
-  {ten:"Nguyễn Minh Sơn",lop:"6A3",ns:"2015-09-04",mk:"R9K3B4",van:5.25,toan:6.25,anh:6.50,tongKhoi:256,tongLop:33,toanKhoi:284,toanLop:40},
-  {ten:"Đào Gia Khánh",lop:"6A3",ns:"2015-03-09",mk:"S3L7C2",van:3.25,toan:5.75,anh:4.25,tongKhoi:359,tongLop:42,toanKhoi:309,toanLop:42},
+  {ten:"Nguyễn Minh Sơn",lop:"6A3",ns:"2015-04-09",mk:"R9K3B4",van:5.25,toan:6.25,anh:6.50,tongKhoi:256,tongLop:33,toanKhoi:284,toanLop:40},
+  {ten:"Đào Gia Khánh",lop:"6A3",ns:"2015-09-03",mk:"S3L7C2",van:3.25,toan:5.75,anh:4.25,tongKhoi:359,tongLop:42,toanKhoi:309,toanLop:42},
   {ten:"Trần Thảo Anh",lop:"6A3",ns:"2015-05-23",mk:"T6M5D9",van:6.50,toan:4.75,anh:3.00,tongKhoi:345,tongLop:41,toanKhoi:345,toanLop:43}
 ];
 
@@ -493,10 +493,16 @@ function hienThi(hs){
     const ls = gk.ls !== undefined ? gk.ls : null;
     const khtn = gk.khtn !== undefined ? gk.khtn : null;
     
-    const rankLine = [
-      typeof gk.hangToan === 'number' ? `Xếp hạng Toán: <b>${gk.hangToan}</b>` : '',
-      typeof gk.hangAnh === 'number' ? `Xếp hạng Tiếng Anh: <b>${gk.hangAnh}</b>` : ''
-    ].filter(Boolean).join(' · ');
+    // Tính xếp hạng Văn tự động dựa trên mảng điểm
+    const rankVan = gk.van !== undefined ? Object.values(DIEM_GK1).map(s=>s.van).filter(v=>v!==undefined).sort((a,b)=>b-a).indexOf(gk.van) + 1 : '';
+    const rankToan = gk.hangToan !== undefined ? gk.hangToan : '';
+    const rankAnh = gk.hangAnh !== undefined ? gk.hangAnh : '';
+
+    const rankParts = [];
+    if (rankVan) rankParts.push(`Xếp hạng Văn: <b>${rankVan}</b>`);
+    if (rankToan) rankParts.push(`Xếp hạng Toán: <b>${rankToan}</b>`);
+    if (rankAnh) rankParts.push(`Xếp hạng Tiếng Anh: <b>${rankAnh}</b>`);
+    const rankLine = rankParts.join(' · ');
 
     // Chỉ hiển thị ghi chú nếu học sinh có trong danh sách GHI_CHU_DIEM
     const ghiChu = GHI_CHU_DIEM[hs.ten] ? `<div class="gk1-note"><b>Ghi chú:</b> ${GHI_CHU_DIEM[hs.ten]}</div>` : '';
